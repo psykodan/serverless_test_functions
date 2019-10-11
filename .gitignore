@@ -1,2 +1,2 @@
 # Don't track the content of these folders
-nodeFunction/node_modules/
+aws/nodeFunction/node_modules/
