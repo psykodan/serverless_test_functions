@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ab -n 100 -c 1 -g p128out1.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio1.txt 2>&1
+ab -n 100 -c 10 -g p128out10.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio10.txt 2>&1
+
+git add .                           # track all files
+git commit -m "testing script"               # commit with message
+git push origin master 
+
+echo Hi there
