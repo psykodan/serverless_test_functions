@@ -1,10 +1,50 @@
 #!/bin/bash
 
-ab -n 100 -c 1 -g p128out1.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio1.txt 2>&1
-ab -n 100 -c 10 -g p128out10.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio10.txt 2>&1
 
-git add .                           # track all files
-git commit -m "testing script"               # commit with message
-git push origin master 
+#python 128MB
+ab -n 100 -c 1 -g p128out0.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio0.txt 
 
-echo Hi there
+ab -n 1 -c 1 -g p128out1.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio1.txt 
+ab -n 10 -c 10 -g p128out10.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio10.txt 
+ab -n 100 -c 100 -g p128out100.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio100.txt 
+ab -n 1000 -c 1000 -g p128out1000.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio1000.txt 
+
+
+#python 256MB
+ab -n 100 -c 1 -g p256out0.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix256  
+
+ab -n 1 -c 1 -g p256out1.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix256  
+ab -n 10 -c 10 -g p256out10.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix256 
+ab -n 100 -c 100 -g p256out100.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix256 
+ab -n 1000 -c 1000 -g p256out1000.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix256 
+
+
+#python 512MB
+ab -n 100 -c 1 -g p512out0.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+
+ab -n 1 -c 1 -g p512out1.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+ab -n 10 -c 10 -g p512out10.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+ab -n 100 -c 100 -g p512out100.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+ab -n 1000 -c 1000 -g p512out1000.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+
+
+#python 1024MB
+ab -n 100 -c 1 -g p1024out0.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+
+ab -n 1 -c 1 -g p1024out1.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+ab -n 10 -c 10 -g p1024out10.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+ab -n 100 -c 100 -g p1024out100.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+ab -n 1000 -c 1000 -g p1024out1000.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+
+
+#python 2048MB
+ab -n 100 -c 1 -g p2048out0.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+
+ab -n 1 -c 1 -g p2048out1.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+ab -n 10 -c 10 -g p2048out10.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+ab -n 100 -c 100 -g p2048out100.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+ab -n 1000 -c 1000 -g p2048out1000.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+
+python3 dataCollator.py
+
+
