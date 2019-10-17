@@ -2,12 +2,12 @@
 
 
 #python 128MB
-ab -n 100 -c 1 -g p128out0.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio0.txt 
+ab -n 100 -c 1 -g p128out0.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128
 
-ab -n 1 -c 1 -g p128out1.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio1.txt 
-ab -n 10 -c 10 -g p128out10.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio10.txt 
-ab -n 100 -c 100 -g p128out100.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio100.txt 
-ab -n 1000 -c 1000 -g p128out1000.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 >p128ratio1000.txt 
+ab -n 1 -c 1 -g p128out1.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 
+ab -n 10 -c 10 -g p128out10.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 
+ab -n 100 -c 100 -g p128out100.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128 
+ab -n 1000 -c 1000 -g p128out1000.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix128
 
 
 #python 256MB
