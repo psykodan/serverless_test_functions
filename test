@@ -45,6 +45,100 @@ ab -n 10 -c 10 -g p2048out10.data https://76mrve5dv3.execute-api.eu-west-1.amazo
 ab -n 100 -c 100 -g p2048out100.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
 ab -n 1000 -c 1000 -g p2048out1000.data https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
 
+
+
+
+#node 128MB
+ab -n 100 -c 1 -g n128out0.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix128
+
+ab -n 1 -c 1 -g n128out1.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix128 
+ab -n 10 -c 10 -g n128out10.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix128 
+ab -n 100 -c 100 -g n128out100.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix128 
+ab -n 1000 -c 1000 -g n128out1000.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix128
+
+
+#node 256MB
+ab -n 100 -c 1 -g n256out0.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix256  
+
+ab -n 1 -c 1 -g n256out1.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix256  
+ab -n 10 -c 10 -g n256out10.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix256 
+ab -n 100 -c 100 -g n256out100.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix256 
+ab -n 1000 -c 1000 -g n256out1000.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix256 
+
+
+#node 512MB
+ab -n 100 -c 1 -g n512out0.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+
+ab -n 1 -c 1 -g n512out1.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+ab -n 10 -c 10 -g n512out10.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+ab -n 100 -c 100 -g n512out100.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+ab -n 1000 -c 1000 -g n512out1000.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+
+
+#node 1024MB
+ab -n 100 -c 1 -g n1024out0.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+
+ab -n 1 -c 1 -g n1024out1.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+ab -n 10 -c 10 -g n1024out10.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+ab -n 100 -c 100 -g n1024out100.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+ab -n 1000 -c 1000 -g n1024out1000.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+
+
+#node 2048MB
+ab -n 100 -c 1 -g n2048out0.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+
+ab -n 1 -c 1 -g n2048out1.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+ab -n 10 -c 10 -g n2048out10.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+ab -n 100 -c 100 -g n2048out100.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+ab -n 1000 -c 1000 -g n2048out1000.data https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/matrix2048
+
+
+
+
+#go 128MB
+ab -n 100 -c 1 -g g128out0.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix128
+
+ab -n 1 -c 1 -g g128out1.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix128 
+ab -n 10 -c 10 -g g128out10.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix128 
+ab -n 100 -c 100 -g g128out100.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix128 
+ab -n 1000 -c 1000 -g g128out1000.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix128
+
+
+#go 256MB
+ab -n 100 -c 1 -g g256out0.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix256  
+
+ab -n 1 -c 1 -g g256out1.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix256  
+ab -n 10 -c 10 -g g256out10.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix256 
+ab -n 100 -c 100 -g g256out100.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix256 
+ab -n 1000 -c 1000 -g g256out1000.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix256 
+
+
+#go 512MB
+ab -n 100 -c 1 -g g512out0.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+
+ab -n 1 -c 1 -g g512out1.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+ab -n 10 -c 10 -g g512out10.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+ab -n 100 -c 100 -g g512out100.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+ab -n 1000 -c 1000 -g g512out1000.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix512 
+
+
+#go 1024MB
+ab -n 100 -c 1 -g g1024out0.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+
+ab -n 1 -c 1 -g g1024out1.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+ab -n 10 -c 10 -g g1024out10.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+ab -n 100 -c 100 -g g1024out100.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+ab -n 1000 -c 1000 -g g1024out1000.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix1024 
+
+
+#go 2048MB
+ab -n 100 -c 1 -g g2048out0.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+
+ab -n 1 -c 1 -g g2048out1.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+ab -n 10 -c 10 -g g2048out10.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+ab -n 100 -c 100 -g g2048out100.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+ab -n 1000 -c 1000 -g g2048out1000.data https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/matrix2048 
+
 python3 dataCollator.py
 
 
