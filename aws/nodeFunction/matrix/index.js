@@ -1,5 +1,5 @@
 exports.handler = async (event, context) => {
-	let start = Date.now();
+	//let start = Date.now();
 	const math = require('mathjs');
 	const os = require('os');
 
@@ -9,7 +9,8 @@ exports.handler = async (event, context) => {
 	const y = x
 
 	math.multiply(x, y);
-
+	console.log(event.requestContext.requestTimeEpoch);
+	let start = event.requestContext.requestTimeEpoch;
 	let stop = Date.now();
 
 	let runtime = stop - start;

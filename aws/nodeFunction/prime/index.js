@@ -1,6 +1,7 @@
 exports.handler = async (event, context) =>  {
-	let start = Date.now();
+	//let start = Date.now();
 	
+	console.log(event.requestContext.requestTimeEpoch);
 	const os = require('os');
 
 
@@ -26,6 +27,7 @@ while(true){
 		count++;
 	}
 	if(context.getRemainingTimeInMillis() <100){
+		let start = event.requestContext.requestTimeEpoch;
 		let stop = Date.now();
 		let runtime = stop - start;
 		let resposeBody = {count: count,
@@ -51,3 +53,4 @@ while(true){
 	n++;	
 }
 };
+

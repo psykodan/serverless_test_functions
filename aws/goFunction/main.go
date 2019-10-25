@@ -1,5 +1,6 @@
 package main
 
+start := time.Now()
 import (
    "github.com/aws/aws-lambda-go/lambda"
    "github.com/aws/aws-lambda-go/events"
@@ -17,12 +18,14 @@ func matrix(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespon
   	y := x
   	z := mat.NewDense(100, 100, nil)
   	z.Product(x,y)
-  	log.Println(z)
-  	response, err := json.Marshal("Complete")
+  	t := time.Now()
+  	runtime := t.Sub(start)
+  	response, err := json.Marshal(runtime)
 
   	if err != nil {
     	return events.APIGatewayProxyResponse{}, err
   	}
+
 
    return events.APIGatewayProxyResponse{
 		StatusCode:200,

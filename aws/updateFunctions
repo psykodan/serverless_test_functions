@@ -1,0 +1,17 @@
+aws lambda update-function-code --function-name nodeMatrix128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodeMatrix256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodeMatrix512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodeMatrix1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodeMatrix2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
+
+aws lambda update-function-code --function-name goMatrix128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
+aws lambda update-function-code --function-name goMatrix256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
+aws lambda update-function-code --function-name goMatrix512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
+aws lambda update-function-code --function-name goMatrix1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
+aws lambda update-function-code --function-name goMatrix2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
+
+aws lambda update-function-code --function-name pythonMatrix128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonMatrix256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonMatrix512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonMatrix1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonMatrix2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
