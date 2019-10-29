@@ -5,6 +5,7 @@ import (
    "github.com/aws/aws-lambda-go/lambda"
    "github.com/aws/aws-lambda-go/events"
    "github.com/shirou/gopsutil/cpu"
+   "github.com/capnm/sysinfo"
    //"github.com/shirou/gopsutil/load"
    "encoding/json"
    "time"
@@ -42,6 +43,7 @@ func CalcPrime(request events.APIGatewayWebsocketProxyRequest) (events.APIGatewa
 	
 	cpui, _ := cpu.Times(true)
 	cpun, _ := cpu.Info()
+	up := sysinfo.Get()
 	
 
 	type ColorGroup struct {

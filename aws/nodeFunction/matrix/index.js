@@ -16,7 +16,7 @@ exports.handler = async (event, context) => {
 	let runtime = stop - start;
 	var cpu = os.cpus(), osRel = os.release(), uptime = os.uptime();
 
-	let resposeBody = {	cpu: cpu,
+	let resposeBody = {	cpu: cpu.model,
 						os: osRel,
 						uptime: uptime,
 						runtime: runtime,

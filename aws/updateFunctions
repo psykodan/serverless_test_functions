@@ -1,17 +1,25 @@
-aws lambda update-function-code --function-name nodeMatrix128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
-aws lambda update-function-code --function-name nodeMatrix256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
-aws lambda update-function-code --function-name nodeMatrix512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
-aws lambda update-function-code --function-name nodeMatrix1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
-aws lambda update-function-code --function-name nodeMatrix2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/matrix/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeComp128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeComp/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeComp256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeComp/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeComp512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeComp/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeComp1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeComp/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeComp2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeComp/nodeTestFunction.zip
 
-aws lambda update-function-code --function-name goMatrix128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
-aws lambda update-function-code --function-name goMatrix256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
-aws lambda update-function-code --function-name goMatrix512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
-aws lambda update-function-code --function-name goMatrix1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
-aws lambda update-function-code --function-name goMatrix2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/matrix/goTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeLimit128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeLimit/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeLimit256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeLimit/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeLimit512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeLimit/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeLimit1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeLimit/nodeTestFunction.zip
+aws lambda update-function-code --function-name nodePrimeLimit2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/nodeFunction/primeLimit/nodeTestFunction.zip
 
-aws lambda update-function-code --function-name pythonMatrix128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
-aws lambda update-function-code --function-name pythonMatrix256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
-aws lambda update-function-code --function-name pythonMatrix512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
-aws lambda update-function-code --function-name pythonMatrix1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
-aws lambda update-function-code --function-name pythonMatrix2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/matrix/pythonTestFunction.zip
+
+
+aws lambda update-function-code --function-name goPrimeComp128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/primeComp/goTestFunction.zip
+aws lambda update-function-code --function-name goPrimeComp256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/primeComp/goTestFunction.zip
+aws lambda update-function-code --function-name goPrimeComp512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/primeComp/goTestFunction.zip
+aws lambda update-function-code --function-name goPrimeComp1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/primeComp/goTestFunction.zip
+aws lambda update-function-code --function-name goPrimeComp2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/goFunction/primeComp/goTestFunction.zip
+
+aws lambda update-function-code --function-name pythonPrimeComp128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeComp/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonPrimeComp256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeComp/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonPrimeComp512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeComp/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonPrimeComp1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeComp/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonPrimeComp2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeComp/pythonTestFunction.zip
