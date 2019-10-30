@@ -1,7 +1,7 @@
 exports.handler = async (event, context) =>  {
 	//let start = Date.now();
 	let start = event.requestContext.requestTimeEpoch;
-	console.log(event.requestContext.requestTimeEpoch);
+	
 	const os = require('os');
 
 
@@ -21,7 +21,7 @@ var cpu = os.cpus(), osRel = os.release(), uptime = os.uptime();
 
 
 let count = 0;
-for(i = 0; i<100000; i++){
+for(i = 0; i<1000000; i++){
 	if(isPrime(i) != false){
 		count++;
 	}
@@ -33,14 +33,14 @@ let load = os.loadavg()
 let resposeBody = {count: count,
 					model1: cpu[0]["model"],
 					speed1: cpu[0]["speed"],
-					user1: cpu[0]["times"]["user"],
-					sys1: cpu[0]["times"]["sys"],
-					idle1: cpu[0]["times"]["idle"],
+					user1: cpu[0]["times"]["user"]/10, // divide by 10 to temporarily fix error at https://github.com/nodejs/node/blob/bdc09c63e6ee9208ebab7e77ac513705263bbd9a/deps/uv/src/unix/linux-core.c#L816
+					sys1: cpu[0]["times"]["sys"]/10,		// it should be user /clock_ticks (*1000 if you want ms)
+					idle1: cpu[0]["times"]["idle"]/10,
 					model2: cpu[1]["model"],
 					speed2: cpu[1]["speed"],
-					user2: cpu[1]["times"]["user"],
-					sys2: cpu[1]["times"]["sys"],
-					idle2: cpu[1]["times"]["idle"],
+					user2: cpu[1]["times"]["user"]/10,
+					sys2: cpu[1]["times"]["sys"]/10,
+					idle2: cpu[1]["times"]["idle"]/10,
 					os: osRel,
 					uptime: uptime,
 					runtime: runtime,

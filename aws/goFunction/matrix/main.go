@@ -6,10 +6,11 @@ import (
    "github.com/aws/aws-lambda-go/events"
    "github.com/shirou/gopsutil/cpu"
    "github.com/capnm/sysinfo"
-   //"github.com/shirou/gopsutil/load"
+   "github.com/shirou/gopsutil/load"
    "encoding/json"
    "time"
    "math"
+   "fmt"
 )
 
 //var start = time.Now().Unix()
@@ -25,6 +26,8 @@ func IsPrime(value int) bool {
 
 func CalcPrime(request events.APIGatewayWebsocketProxyRequest) (events.APIGatewayProxyResponse, error){
 	
+	start := request.RequestContext.RequestTimeEpoch
+
 	count := 0
 	for i := 1; i <= 100000; i++ {
         if IsPrime(i) {
@@ -34,25 +37,29 @@ func CalcPrime(request events.APIGatewayWebsocketProxyRequest) (events.APIGatewa
 
 
 
-    start := request.RequestContext.RequestTimeEpoch
+    
     stop := time.Now().UnixNano()/1000000
-   	
   	runtime := stop - start
+  	load1 := load.Load1
+  	load5 := load.Load5
+  	load15 := load.Load15
 
 	
 	
-	cpui, _ := cpu.Times(true)
-	cpun, _ := cpu.Info()
-	up := sysinfo.Get()
-	
+	cputime, _ := cpu.Times(true)
+	cpuinfo, _ := cpu.Info()
+	uptime := sysinfo.Get().Uptime
 
-	type ColorGroup struct {
+	fmt.Printf(cputime.CPU)
+		
+
+	type ResponseBody struct {
 		CPU    []cpu.InfoStat
 		ID     []cpu.TimesStat
 		Name   int64
 		
 	}
-	group := ColorGroup{
+	group := ResponseBody{
 		CPU:	cpun,
 		ID:     cpui,
 		Name:   runtime,
