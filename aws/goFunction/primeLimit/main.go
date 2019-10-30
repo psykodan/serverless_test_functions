@@ -11,7 +11,7 @@ import (
    "time"
    "math"
    "context"
-   "log"
+   
 )
 
 //var start = time.Now().Unix()
@@ -29,22 +29,11 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 	
 	deadline, _ := ctx.Deadline()
     
-    log.Print(time.Until(deadline))
+    
 
 	start := request.RequestContext.RequestTimeEpoch
 
-	count := 0
-	for i := 1; i <= 1000000; i++ {
-        if IsPrime(i) {
-            count++
-        }
-    }
-
-
-
-    stop := time.Now().UnixNano()/1000000
-  	runtime := stop - start
-  	load, _ := load.Avg()
+	load, _ := load.Avg()
   	load1 := load.Load1
   	load5 := load.Load5
   	load15 := load.Load15
@@ -55,15 +44,10 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 	cputime, _ := cpu.Times(true)
 	
 
-
-
-	
-
-		
-
 	type ResponseBody struct {
 
-		Count	int 	
+		Count	int 
+		Prime 	int	
 		Model1	string
 		Speed1	float64
 		User1	float64
@@ -84,47 +68,73 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 		
 		
 	}
-	group := ResponseBody{
-		Count:	count,
-		Model1:	cpuinfo[0].ModelName,
-		Speed1: cpuinfo[0].Mhz,
-		User1:	cputime[0].User * 1000,
-		Sys1:	cputime[0].System * 1000,
-		Idle1:	cputime[0].Idle * 1000,
-		Model2:	cpuinfo[1].ModelName,
-		Speed2: cpuinfo[1].Mhz,
-		User2:	cputime[1].User * 1000,
-		Sys2:	cputime[1].System * 1000,
-		Idle2:	cputime[1].Idle * 1000,
-		OS:		osinfo.KernelVersion,
-		Uptime:	osinfo.Uptime,
-		Runtime:	runtime,
-		Time:	start,
-		Load1:	load1,
-		Load5:	load5,
-		Load15:	load15,
-		
-	}
+
+	prime := 0
+	n := 3
+	count := 0
+
+	for 1 == 1{
+        if IsPrime(n) {
+        	prime = n
+            count++
+        }
+
+        if time.Until(deadline) < 100 *time.Millisecond{
 
 
 
+        	stop := time.Now().UnixNano()/1000000
+		  	runtime := stop - start
+		  	
+			group := ResponseBody{
+				Count:	count,
+				Prime:	prime,
+				Model1:	cpuinfo[0].ModelName,
+				Speed1: cpuinfo[0].Mhz,
+				User1:	cputime[0].User * 1000,
+				Sys1:	cputime[0].System * 1000,
+				Idle1:	cputime[0].Idle * 1000,
+				Model2:	cpuinfo[1].ModelName,
+				Speed2: cpuinfo[1].Mhz,
+				User2:	cputime[1].User * 1000,
+				Sys2:	cputime[1].System * 1000,
+				Idle2:	cputime[1].Idle * 1000,
+				OS:		osinfo.KernelVersion,
+				Uptime:	osinfo.Uptime,
+				Runtime:	runtime,
+				Time:	start,
+				Load1:	load1,
+				Load5:	load5,
+				Load15:	load15,
+				
+			}
+
+
+		    response, err := json.Marshal(group)
+
+
+		  	if err != nil {
+		    	return events.APIGatewayProxyResponse{}, err
+		  	}
+
+
+		   return events.APIGatewayProxyResponse{
+				StatusCode:200,
+				Body: string(response),
+			}, nil
+		        }
+
+        n++
+    }
+    
+    return events.APIGatewayProxyResponse{
+				StatusCode:400,
+				Body: string("Error"),
+			}, nil
 
 
 
-
-
-    response, err := json.Marshal(group)
-
-
-  	if err != nil {
-    	return events.APIGatewayProxyResponse{}, err
-  	}
-
-
-   return events.APIGatewayProxyResponse{
-		StatusCode:200,
-		Body: string(response),
-	}, nil
+    
 }
 
 
