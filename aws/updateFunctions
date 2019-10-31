@@ -29,3 +29,9 @@ aws lambda update-function-code --function-name pythonPrimeComp256 --region eu-w
 aws lambda update-function-code --function-name pythonPrimeComp512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeComp/pythonTestFunction.zip
 aws lambda update-function-code --function-name pythonPrimeComp1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeComp/pythonTestFunction.zip
 aws lambda update-function-code --function-name pythonPrimeComp2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeComp/pythonTestFunction.zip
+
+aws lambda update-function-code --function-name pythonPrimeLimit128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeLimit/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonPrimeLimit256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeLimit/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonPrimeLimit512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeLimit/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonPrimeLimit1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeLimit/pythonTestFunction.zip
+aws lambda update-function-code --function-name pythonPrimeLimit2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeLimit/pythonTestFunction.zip

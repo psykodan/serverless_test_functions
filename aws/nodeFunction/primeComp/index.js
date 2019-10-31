@@ -21,7 +21,7 @@ var cpu = os.cpus(), osRel = os.release(), uptime = os.uptime();
 
 
 let count = 0;
-for(i = 0; i<1000000; i++){
+for(i = 0; i<250000; i++){
 	if(isPrime(i) != false){
 		count++;
 	}

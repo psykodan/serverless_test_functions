@@ -28,7 +28,7 @@ func CalcPrime(request events.APIGatewayWebsocketProxyRequest) (events.APIGatewa
 	start := request.RequestContext.RequestTimeEpoch
 
 	count := 0
-	for i := 1; i <= 1000000; i++ {
+	for i := 1; i <= 250000; i++ {
         if IsPrime(i) {
             count++
         }

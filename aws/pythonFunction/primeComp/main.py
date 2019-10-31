@@ -20,7 +20,7 @@ def CalcPrimes(event):
 	start = event["requestContext"]["requestTimeEpoch"]
 
 	count = 0
-	for i in range(100000):
+	for i in range(250000):
 		if isPrime(i) != False:
 			count += 1
 
@@ -39,7 +39,7 @@ def CalcPrimes(event):
 			
 		if (l.find('cpu MHz') != -1):
 			sp = l.split(":")
-			speed.append(sp[1][1:-1])
+			speed.append(int(float(sp[1][1:-1])))
 			
 	
 	times=psutil.cpu_times(percpu=True)
@@ -65,6 +65,7 @@ def CalcPrimes(event):
 	"os" : os,
 	"uptime" : uptime,
 	"runtime" : runtime,
+	"time"	:	start,
 	"load1" : load[0],
 	"load5" : load[1],
 	"load15" : load[2]
