@@ -11,6 +11,9 @@ import (
    "time"
    "math"
    "context"
+   "math/rand"
+   "strconv"
+   "fmt"
    
 )
 
@@ -31,7 +34,7 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
     
     
 
-	start := request.RequestContext.RequestTimeEpoch
+	//start := request.RequestContext.RequestTimeEpoch
 
 	load, _ := load.Avg()
   	load1 := load.Load1
@@ -46,6 +49,7 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 
 	type ResponseBody struct {
 
+		ID 		string
 		Count	int 
 		Prime 	int	
 		Model1	string
@@ -60,8 +64,7 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 		Idle2	float64
 		OS 		string
 		Uptime  uint64
-		Runtime	int64
-		Time 	int64
+		Time 	int
 		Load1 	float64
 		Load5 	float64
 		Load15 	float64
@@ -83,10 +86,19 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 
 
 
-        	stop := time.Now().UnixNano()/1000000
-		  	runtime := stop - start
+        	stop := int(time.Now().UnixNano()/10000000)
+		  	//runtime := stop - start
+
+		  	head := ""
+			rand.Seed(time.Now().UnixNano())
+			for i := 0; i < 7; i++ {
+				head += fmt.Sprintf("%x",int(rand.Float64() * 255))
+			}
+			id := head + strconv.Itoa(stop)
+			fmt.Print(id)
 		  	
 			group := ResponseBody{
+				ID:		id,
 				Count:	count,
 				Prime:	prime,
 				Model1:	cpuinfo[0].ModelName,
@@ -101,8 +113,7 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 				Idle2:	cputime[1].Idle * 1000,
 				OS:		osinfo.KernelVersion,
 				Uptime:	osinfo.Uptime,
-				Runtime:	runtime,
-				Time:	start,
+				Time:	stop,
 				Load1:	load1,
 				Load5:	load5,
 				Load15:	load15,

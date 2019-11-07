@@ -3,6 +3,7 @@ import math
 import psutil
 import platform
 import time
+import random
 
 
 def isPrime(number):
@@ -17,7 +18,7 @@ def isPrime(number):
 
 def CalcPrimes(event, context):
 
-	start = event["requestContext"]["requestTimeEpoch"]
+	#start = event["requestContext"]["requestTimeEpoch"]
 
 	f = open("/proc/cpuinfo")
 	lines = f.readlines()
@@ -50,11 +51,20 @@ def CalcPrimes(event, context):
 		if context.get_remaining_time_in_millis()<100:
 
 			stop = int(time.time()*1000)
-			uptime = int((start/1000)-psutil.boot_time())
-			runtime = stop - start
+			uptime = int((stop/1000)-psutil.boot_time())
+			#runtime = stop - start
 			load = psutil.getloadavg()
+			head=""
+			temp=""
+			for i in range(7):
+				temp = str(hex(math.floor(random.random() *255 )))
+				head += (temp.split("x"))[1]
+				
+			ID = head + str(stop)
+			print(ID)
 
 			response = {
+			"id":	ID,
 			"count" : count,
 			"prime" : prime,
 			"model1" : model[0],
@@ -69,8 +79,7 @@ def CalcPrimes(event, context):
 			"idle2" : times[1].idle*1000,
 			"os" : os,
 			"uptime" : uptime,
-			"runtime" : runtime,
-			"time"	:	start,
+			"time"	:	stop,
 			"load1" : load[0],
 			"load5" : load[1],
 			"load15" : load[2]
