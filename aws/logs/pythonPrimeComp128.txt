@@ -1,0 +1,8 @@
+START RequestId: 001027ea-49c4-4fc1-b1f4-7f5a06a7ba1e Version: $LATEST
+
+[INFO]	2019-11-11T11:58:04.259Z	001027ea-49c4-4fc1-b1f4-7f5a06a7ba1e	829222522c9b31573473484259
+
+END RequestId: 001027ea-49c4-4fc1-b1f4-7f5a06a7ba1e
+
+REPORT RequestId: 001027ea-49c4-4fc1-b1f4-7f5a06a7ba1e	Duration: 21906.71 ms	Billed Duration: 22000 ms	Memory Size: 128 MB	Max Memory Used: 54 MB	Init Duration: 30.21 ms	
+

@@ -1,0 +1,2 @@
+{"ID":"4af3931b6c6b621573473459514","Count":22044,"Model1":"Intel(R) Xeon(R) Processor @ 2.50GHz","Speed1":2500.006,"User1":140,"Sys1":290,"Idle1":1643610,"Model2":"Intel(R) Xeon(R) Processor @ 2.50GHz","Speed2":2500.006,"User2":390,"Sys2":280,"Idle2":1643570,"OS":"4.14.133-97.112.amzn2.x86_64","Uptime":1644,"Time":1573473459514,"Load1":0,"Load5":0,"Load15":0}
+

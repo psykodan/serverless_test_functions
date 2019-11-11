@@ -4,6 +4,7 @@ import psutil
 import platform
 import time
 import random
+import logging
 
 
 def isPrime(number):
@@ -17,9 +18,10 @@ def isPrime(number):
 
 
 def CalcPrimes(event, context):
+	logging.getLogger().setLevel(logging.INFO)
 
 	#start = event["requestContext"]["requestTimeEpoch"]
-
+	start = time.time()
 	f = open("/proc/cpuinfo")
 	lines = f.readlines()
 	f.close()
@@ -48,7 +50,7 @@ def CalcPrimes(event, context):
 			count += 1
 
 
-		if context.get_remaining_time_in_millis()<100:
+		if time.time()-start > 2:
 
 			stop = int(time.time()*1000)
 			uptime = int((stop/1000)-psutil.boot_time())
@@ -61,7 +63,7 @@ def CalcPrimes(event, context):
 				head += (temp.split("x"))[1]
 				
 			ID = head + str(stop)
-			print(ID)
+			logging.info(ID)
 
 			response = {
 			"id":	ID,

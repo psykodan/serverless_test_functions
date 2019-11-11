@@ -1,5 +1,5 @@
 exports.handler = async (event, context) =>  {
-	//let start = Date.now();
+	let begin = Date.now();
 	//let start = event.requestContext.requestTimeEpoch;
 	//console.log(event.requestContext.requestTimeEpoch);
 	const os = require('os');
@@ -26,7 +26,7 @@ while(true){
 		prime = n;
 		count++;
 	}
-	if(context.getRemainingTimeInMillis() <100){
+	if(Date.now()-begin>2000){
 		let stop = Date.now();
 		//let runtime = stop - start;
 		let load = os.loadavg()

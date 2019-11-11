@@ -4,6 +4,7 @@ package main
 import (
    "github.com/aws/aws-lambda-go/lambda"
    "github.com/aws/aws-lambda-go/events"
+   "github.com/aws/aws-lambda-go/lambdacontext"
    "github.com/shirou/gopsutil/cpu"
    "github.com/shirou/gopsutil/host"
    "github.com/shirou/gopsutil/load"
@@ -13,6 +14,8 @@ import (
    "math/rand"
    "strconv"
    "fmt"
+   "log"
+   "context"
 )
 
 //var start = time.Now().Unix()
@@ -26,8 +29,8 @@ func IsPrime(value int) bool {
 }
 
 
-func CalcPrime(request events.APIGatewayWebsocketProxyRequest) (events.APIGatewayProxyResponse, error){
-	
+func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyRequest) (events.APIGatewayProxyResponse, error){
+	lc, _ := lambdacontext.FromContext(ctx)
 	//start := request.RequestContext.RequestTimeEpoch
 
 	count := 0
@@ -58,7 +61,7 @@ func CalcPrime(request events.APIGatewayWebsocketProxyRequest) (events.APIGatewa
 	}
 	id := head + strconv.Itoa(stop)
 
-	fmt.Print(id)
+	log.Printf("\t%s\tINFO\t" + id, lc.AwsRequestID)
 	
 
 		

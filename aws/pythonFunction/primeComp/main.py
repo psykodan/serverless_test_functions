@@ -4,6 +4,7 @@ import psutil
 import platform
 import time
 import random
+import logging
 
 
 def isPrime(number):
@@ -17,7 +18,7 @@ def isPrime(number):
 
 
 def CalcPrimes(event):
-
+	logging.getLogger().setLevel(logging.INFO)
 	#start = event["requestContext"]["requestTimeEpoch"]
 
 	count = 0
@@ -57,7 +58,7 @@ def CalcPrimes(event):
 		
 	ID = head + str(stop)
 
-	print(ID)
+	logging.info(ID)
 
 	response = {
 	"id":	ID,

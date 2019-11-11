@@ -1,0 +1,8 @@
+START RequestId: 0e48d677-b436-4b83-8343-5eb5f2ae6efd Version: $LATEST
+
+2019-11-11T11:57:34.966Z	0e48d677-b436-4b83-8343-5eb5f2ae6efd	INFO	674f58d8f09e951573473454965
+
+END RequestId: 0e48d677-b436-4b83-8343-5eb5f2ae6efd
+
+REPORT RequestId: 0e48d677-b436-4b83-8343-5eb5f2ae6efd	Duration: 846.09 ms	Billed Duration: 900 ms	Memory Size: 128 MB	Max Memory Used: 76 MB	Init Duration: 168.51 ms	
+

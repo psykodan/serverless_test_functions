@@ -1,0 +1,8 @@
+START RequestId: 49b3a22e-6569-49cc-bc34-c87dabc1d552 Version: $LATEST
+
+2019-11-11T11:57:37.456Z	49b3a22e-6569-49cc-bc34-c87dabc1d552	INFO	b4d9d7c682f9101573473457455
+
+END RequestId: 49b3a22e-6569-49cc-bc34-c87dabc1d552
+
+REPORT RequestId: 49b3a22e-6569-49cc-bc34-c87dabc1d552	Duration: 2074.09 ms	Billed Duration: 2100 ms	Memory Size: 128 MB	Max Memory Used: 80 MB	Init Duration: 148.94 ms	
+

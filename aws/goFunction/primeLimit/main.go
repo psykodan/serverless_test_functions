@@ -4,6 +4,7 @@ package main
 import (
    "github.com/aws/aws-lambda-go/lambda"
    "github.com/aws/aws-lambda-go/events"
+   "github.com/aws/aws-lambda-go/lambdacontext"
    "github.com/shirou/gopsutil/cpu"
    "github.com/shirou/gopsutil/host"
    "github.com/shirou/gopsutil/load"
@@ -14,7 +15,7 @@ import (
    "math/rand"
    "strconv"
    "fmt"
-   
+   "log"
 )
 
 //var start = time.Now().Unix()
@@ -30,10 +31,11 @@ func IsPrime(value int) bool {
 
 func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyRequest) (events.APIGatewayProxyResponse, error){
 	
-	deadline, _ := ctx.Deadline()
-    
-    
+	//deadline, _ := ctx.Deadline()
+    lc, _ := lambdacontext.FromContext(ctx)
 
+    
+	start := time.Now().UnixNano()/1000000
 	//start := request.RequestContext.RequestTimeEpoch
 
 	load, _ := load.Avg()
@@ -82,7 +84,7 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
             count++
         }
 
-        if time.Until(deadline) < 100 *time.Millisecond{
+        if (time.Now().UnixNano()/1000000) - start >2000{
 
 
 
@@ -95,7 +97,7 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 				head += fmt.Sprintf("%x",int(rand.Float64() * 255))
 			}
 			id := head + strconv.Itoa(stop)
-			fmt.Print(id)
+			log.Printf("\t%s\tINFO\t" + id, lc.AwsRequestID)
 		  	
 			group := ResponseBody{
 				ID:		id,
