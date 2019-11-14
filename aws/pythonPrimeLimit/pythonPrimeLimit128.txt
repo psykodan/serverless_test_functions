@@ -1,2 +1,0 @@
-{"id": "70e67e82c543c91573473486640", "count": 4277, "prime": 40849, "model1": "Intel(R) Xeon(R) Processor @ 2.50GHz", "speed1": 2500, "user1": 400.0, "sys1": 240.0, "idle1": 1256770.0, "model2": "Intel(R) Xeon(R) Processor @ 2.50GHz", "speed2": 2500, "user2": 130.0, "sys2": 260.0, "idle2": 1257080.0, "os": "4.14.133-97.112.amzn2.x86_64", "uptime": 1259, "time": 1573473486640, "load1": 0.0, "load5": 0.0, "load15": 0.0}
-

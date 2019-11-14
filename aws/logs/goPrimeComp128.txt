@@ -1,8 +1,0 @@
-START RequestId: 807b4843-2bcf-4c4b-aca2-08f2995f9e68 Version: $LATEST
-
-2019/11/11 11:57:39 	807b4843-2bcf-4c4b-aca2-08f2995f9e68	INFO	4af3931b6c6b621573473459514
-
-END RequestId: 807b4843-2bcf-4c4b-aca2-08f2995f9e68
-
-REPORT RequestId: 807b4843-2bcf-4c4b-aca2-08f2995f9e68	Duration: 1755.26 ms	Billed Duration: 1800 ms	Memory Size: 128 MB	Max Memory Used: 42 MB	Init Duration: 67.74 ms	
-

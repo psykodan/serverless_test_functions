@@ -1,0 +1,51 @@
+#!/bin/bash
+cd nodeFunction/primeLimit/
+gcloud functions deploy nodePrimeLimit128 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 128MB
+gcloud functions deploy nodePrimeLimit256 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 256MB
+gcloud functions deploy nodePrimeLimit512 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 512MB
+gcloud functions deploy nodePrimeLimit1024 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 1024MB
+gcloud functions deploy nodePrimeLimit2048 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 2048MB
+
+cd ..
+cd primeComp/
+gcloud functions deploy nodePrimeComp128 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 128MB
+gcloud functions deploy nodePrimeComp256 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 256MB
+gcloud functions deploy nodePrimeComp512 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 512MB
+gcloud functions deploy nodePrimeComp1024 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 1024MB
+gcloud functions deploy nodePrimeComp2048 --entry-point index --runtime nodejs8 --trigger-http --allow-unauthenticated --memory 2048MB
+
+
+cd ..
+cd ..
+cd pythonFunction/primeLimit/
+gcloud functions deploy pythonPrimeLimit128 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 128MB
+gcloud functions deploy pythonPrimeLimit256 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 256MB
+gcloud functions deploy pythonPrimeLimit512 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 512MB
+gcloud functions deploy pythonPrimeLimit1024 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 1024MB
+gcloud functions deploy pythonPrimeLimit2048 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 2048MB
+
+cd ..
+cd primeComp/
+gcloud functions deploy pythonPrimeComp128 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 128MB
+gcloud functions deploy pythonPrimeComp256 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 256MB
+gcloud functions deploy pythonPrimeComp512 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 512MB
+gcloud functions deploy pythonPrimeComp1024 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 1024MB
+gcloud functions deploy pythonPrimeComp2048 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 2048MB
+
+
+cd ..
+cd ..
+cd goFunction/primeLimit/
+gcloud functions deploy goPrimeLimit128 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 128MB
+gcloud functions deploy goPrimeLimit256 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 256MB
+gcloud functions deploy goPrimeLimit512 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 512MB
+gcloud functions deploy goPrimeLimit1024 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 1024MB
+gcloud functions deploy goPrimeLimit2048 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 2048MB
+
+cd ..
+cd primeComp/
+gcloud functions deploy goPrimeComp128 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 128MB
+gcloud functions deploy goPrimeComp256 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 256MB
+gcloud functions deploy goPrimeComp512 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 512MB
+gcloud functions deploy goPrimeComp1024 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 1024MB
+gcloud functions deploy goPrimeComp2048 --entry-point Main --runtime go111 --trigger-http --allow-unauthenticated --memory 2048MB
