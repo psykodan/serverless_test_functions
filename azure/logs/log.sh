@@ -1,0 +1,31 @@
+
+
+saw get /aws/lambda/goPrimeComp1024 --start -2h>>goPrimeComp1024.txt
+saw get /aws/lambda/goPrimeComp128 --start -2h>>goPrimeComp128.txt
+saw get /aws/lambda/goPrimeComp2048 --start -2h>>goPrimeComp2048.txt
+saw get /aws/lambda/goPrimeComp256 --start -2h>>goPrimeComp256.txt
+saw get /aws/lambda/goPrimeComp512 --start -2h>>goPrimeComp512.txt
+saw get /aws/lambda/goPrimeLimit1024 --start -2h>>goPrimeLimit1024.txt
+saw get /aws/lambda/goPrimeLimit128 --start -2h>>goPrimeLimit128.txt
+saw get /aws/lambda/goPrimeLimit2048 --start -2h>>goPrimeLimit2048.txt
+saw get /aws/lambda/goPrimeLimit256 --start -2h>>goPrimeLimit256.txt
+saw get /aws/lambda/goPrimeLimit512 --start -2h>>goPrimeLimit512.txt
+saw get /aws/lambda/nodePrimeComp1024 --start -2h>>nodePrimeComp1024.txt
+saw get /aws/lambda/nodePrimeComp128 --start -2h>>nodePrimeComp128.txt
+saw get /aws/lambda/nodePrimeComp2048 --start -2h>>nodePrimeComp2048.txt
+saw get /aws/lambda/nodePrimeComp256 --start -2h>>nodePrimeComp256.txt
+saw get /aws/lambda/nodePrimeComp512 --start -2h>>nodePrimeComp512.txt
+saw get /aws/lambda/nodePrimeLimit1024 --start -2h>>nodePrimeLimit1024.txt
+saw get /aws/lambda/nodePrimeLimit128 --start -2h>>nodePrimeLimit128.txt
+saw get /aws/lambda/nodePrimeLimit2048 --start -2h>>nodePrimeLimit2048.txt
+saw get /aws/lambda/nodePrimeLimit256 --start -2h>>nodePrimeLimit256.txt
+saw get /aws/lambda/nodePrimeLimit512 --start -2h>>nodePrimeLimit512.txt
+saw get /aws/lambda/pythonPrimeComp1024 --start -2h>>pythonPrimeComp1024.txt
+saw get /aws/lambda/pythonPrimeComp128 --start -2h>>pythonPrimeComp128.txt
+saw get /aws/lambda/pythonPrimeComp2048 --start -2h>>pythonPrimeComp2048.txt
+saw get /aws/lambda/pythonPrimeComp256 --start -2h>>pythonPrimeComp256.txt
+saw get /aws/lambda/pythonPrimeLimit1024 --start -2h>>pythonPrimeLimit1024.txt
+saw get /aws/lambda/pythonPrimeLimit128 --start -2h>>pythonPrimeLimit128.txt
+saw get /aws/lambda/pythonPrimeLimit2048 --start -2h>>pythonPrimeLimit2048.txt
+saw get /aws/lambda/pythonPrimeLimit256 --start -2h>>pythonPrimeLimit256.txt
+saw get /aws/lambda/pythonPrimeLimit512 --start -2h>>pythonPrimeLimit512.txt

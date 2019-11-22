@@ -1,0 +1,230 @@
+
+#node
+
+#PrimeComp number calculation / Runtime test
+
+#128MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>nodePrimeComp/nodePrimeComp128.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>nodePrimeComp/nodePrimeComp128-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>nodePrimeComp/nodePrimeComp128-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>nodePrimeComp/nodePrimeComp128-1000.txt
+
+#256MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>nodePrimeComp/nodePrimeComp256.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>nodePrimeComp/nodePrimeComp256-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>nodePrimeComp/nodePrimeComp256-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>nodePrimeComp/nodePrimeComp256-1000.txt
+
+#512MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>nodePrimeComp/nodePrimeComp512.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>nodePrimeComp/nodePrimeComp512-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>nodePrimeComp/nodePrimeComp512-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>nodePrimeComp/nodePrimeComp512-1000.txt
+
+#1024MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>nodePrimeComp/nodePrimeComp1024.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>nodePrimeComp/nodePrimeComp1024-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>nodePrimeComp/nodePrimeComp1024-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>nodePrimeComp/nodePrimeComp1024-1000.txt
+
+#2048MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>nodePrimeComp/nodePrimeComp2048.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>nodePrimeComp/nodePrimeComp2048-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>nodePrimeComp/nodePrimeComp2048-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>nodePrimeComp/nodePrimeComp2048-1000.txt
+
+#PrimeLimit number calculation / CPU test
+
+#128MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>nodePrimeLimit/nodePrimeLimit128.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>nodePrimeLimit/nodePrimeLimit128-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>nodePrimeLimit/nodePrimeLimit128-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>nodePrimeLimit/nodePrimeLimit128-1000.txt
+
+#256MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>nodePrimeLimit/nodePrimeLimit256.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>nodePrimeLimit/nodePrimeLimit256-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>nodePrimeLimit/nodePrimeLimit256-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>nodePrimeLimit/nodePrimeLimit256-1000.txt
+
+#512MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>nodePrimeLimit/nodePrimeLimit512.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>nodePrimeLimit/nodePrimeLimit512-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>nodePrimeLimit/nodePrimeLimit512-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>nodePrimeLimit/nodePrimeLimit512-1000.txt
+
+#1024MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>nodePrimeLimit/nodePrimeLimit1024.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>nodePrimeLimit/nodePrimeLimit1024-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>nodePrimeLimit/nodePrimeLimit1024-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>nodePrimeLimit/nodePrimeLimit1024-1000.txt
+
+#2048MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>nodePrimeLimit/nodePrimeLimit2048.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>nodePrimeLimit/nodePrimeLimit2048-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>nodePrimeLimit/nodePrimeLimit2048-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>nodePrimeLimit/nodePrimeLimit2048-1000.txt
+
+
+#go
+
+#PrimeComp number calculation / Runtime test
+
+#128MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>goPrimeComp/goPrimeComp128.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>goPrimeComp/goPrimeComp128-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>goPrimeComp/goPrimeComp128-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>goPrimeComp/goPrimeComp128-1000.txt
+
+#256MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>goPrimeComp/goPrimeComp256.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>goPrimeComp/goPrimeComp256-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>goPrimeComp/goPrimeComp256-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>goPrimeComp/goPrimeComp256-1000.txt
+
+#512MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>goPrimeComp/goPrimeComp512.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>goPrimeComp/goPrimeComp512-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>goPrimeComp/goPrimeComp512-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>goPrimeComp/goPrimeComp512-1000.txt
+
+#1024MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>goPrimeComp/goPrimeComp1024.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>goPrimeComp/goPrimeComp1024-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>goPrimeComp/goPrimeComp1024-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>goPrimeComp/goPrimeComp1024-1000.txt
+
+#2048MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>goPrimeComp/goPrimeComp2048.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>goPrimeComp/goPrimeComp2048-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>goPrimeComp/goPrimeComp2048-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>goPrimeComp/goPrimeComp2048-1000.txt
+
+#PrimeLimit number calculation / CPU test
+
+#128MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>goPrimeLimit/goPrimeLimit128.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>goPrimeLimit/goPrimeLimit128-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>goPrimeLimit/goPrimeLimit128-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>goPrimeLimit/goPrimeLimit128-1000.txt
+
+#256MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>goPrimeLimit/goPrimeLimit256.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>goPrimeLimit/goPrimeLimit256-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>goPrimeLimit/goPrimeLimit256-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>goPrimeLimit/goPrimeLimit256-1000.txt
+
+#512MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>goPrimeLimit/goPrimeLimit512.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>goPrimeLimit/goPrimeLimit512-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>goPrimeLimit/goPrimeLimit512-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>goPrimeLimit/goPrimeLimit512-1000.txt
+
+#1024MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>goPrimeLimit/goPrimeLimit1024.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>goPrimeLimit/goPrimeLimit1024-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>goPrimeLimit/goPrimeLimit1024-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>goPrimeLimit/goPrimeLimit1024-1000.txt
+
+#2048MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>goPrimeLimit/goPrimeLimit2048.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>goPrimeLimit/goPrimeLimit2048-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>goPrimeLimit/goPrimeLimit2048-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>goPrimeLimit/goPrimeLimit2048-1000.txt
+
+
+#python
+
+#PrimeComp number calculation / Runtime test
+
+#128MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>pythonPrimeComp/pythonPrimeComp128.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>pythonPrimeComp/pythonPrimeComp128-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>pythonPrimeComp/pythonPrimeComp128-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>pythonPrimeComp/pythonPrimeComp128-1000.txt
+
+#256MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>pythonPrimeComp/pythonPrimeComp256.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>pythonPrimeComp/pythonPrimeComp256-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>pythonPrimeComp/pythonPrimeComp256-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>pythonPrimeComp/pythonPrimeComp256-1000.txt
+
+#512MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>pythonPrimeComp/pythonPrimeComp512.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>pythonPrimeComp/pythonPrimeComp512-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>pythonPrimeComp/pythonPrimeComp512-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>pythonPrimeComp/pythonPrimeComp512-1000.txt
+
+#1024MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>pythonPrimeComp/pythonPrimeComp1024.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>pythonPrimeComp/pythonPrimeComp1024-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>pythonPrimeComp/pythonPrimeComp1024-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>pythonPrimeComp/pythonPrimeComp1024-1000.txt
+
+#2048MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>pythonPrimeComp/pythonPrimeComp2048.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>pythonPrimeComp/pythonPrimeComp2048-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>pythonPrimeComp/pythonPrimeComp2048-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>pythonPrimeComp/pythonPrimeComp2048-1000.txt
+
+#PrimeLimit number calculation / CPU test
+
+#128MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>pythonPrimeLimit/pythonPrimeLimit128.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>pythonPrimeLimit/pythonPrimeLimit128-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>pythonPrimeLimit/pythonPrimeLimit128-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>pythonPrimeLimit/pythonPrimeLimit128-1000.txt
+
+#256MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>pythonPrimeLimit/pythonPrimeLimit256.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>pythonPrimeLimit/pythonPrimeLimit256-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>pythonPrimeLimit/pythonPrimeLimit256-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit256">>pythonPrimeLimit/pythonPrimeLimit256-1000.txt
+
+#512MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>pythonPrimeLimit/pythonPrimeLimit512.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>pythonPrimeLimit/pythonPrimeLimit512-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>pythonPrimeLimit/pythonPrimeLimit512-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit512">>pythonPrimeLimit/pythonPrimeLimit512-1000.txt
+
+#1024MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>pythonPrimeLimit/pythonPrimeLimit1024.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>pythonPrimeLimit/pythonPrimeLimit1024-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>pythonPrimeLimit/pythonPrimeLimit1024-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit1024">>pythonPrimeLimit/pythonPrimeLimit1024-1000.txt
+
+#2048MB
+seq 1 10 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>pythonPrimeLimit/pythonPrimeLimit2048.txt
+
+seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>pythonPrimeLimit/pythonPrimeLimit2048-1.txt
+seq 1 100 | xargs -n1 -P100  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>pythonPrimeLimit/pythonPrimeLimit2048-100.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit2048">>pythonPrimeLimit/pythonPrimeLimit2048-1000.txt
