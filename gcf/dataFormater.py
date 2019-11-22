@@ -21,7 +21,7 @@ badVals = ["\n", '{"message":"Missing Authentication Token"}\n' , '{"message": "
 #goodVals = ["INFO", "REPORT"]
 for test in ["nodePrimeComp","nodePrimeLimit","goPrimeComp","goPrimeLimit","pythonPrimeComp","pythonPrimeLimit"]:
     for memorySize in ["128","256","512","1024","2048"]:
-        for name in ["", "-1","-100","-1000"]:
+        for name in ["", "-1","-1000"]:
             fileName = "{}/{}{}{}.txt"
             outName ="{}/F{}{}{}.csv"
             logName = "logs/{}{}.txt"

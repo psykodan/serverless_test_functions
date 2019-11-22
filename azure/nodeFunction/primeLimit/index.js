@@ -50,7 +50,7 @@ while(run == true){
 							load15: load[2],
 							};
 		run = false;
-		context.res.json(responseBody);
+		context.res.send(JSON.stringify(responseBody));
 
 
 	};

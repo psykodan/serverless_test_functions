@@ -1,0 +1,6 @@
+{"id": "6900f2e1-6278-4a70-9611-1e59119634f3", "count": 21717, "prime": 246097, "model1": "Intel(R) Xeon(R) CPU E5-2673 v4 @ 2.30GHz", "speed1": 2294, "user1": 10932160.0, "sys1": 11530460.0, "idle1": 586922240.0, "os": "4.4.0-128-generic", "uptime": 667757, "time": 1574426829906, "load1": 0.35, "load5": 0.35, "load15": 0.3}
+
+{"id": "94b68dff-5a8e-41fb-b430-67eb1e3697e1", "count": 22378, "prime": 254209, "model1": "Intel(R) Xeon(R) CPU E5-2673 v4 @ 2.30GHz", "speed1": 2294, "user1": 10937830.0, "sys1": 11532590.0, "idle1": 586955410.0, "os": "4.4.0-128-generic", "uptime": 667803, "time": 1574426875241, "load1": 0.38, "load5": 0.35, "load15": 0.3}
+
+{"id": "d326dc53-af98-4d10-8b30-bbce7eac4b4a", "count": 22506, "prime": 255803, "model1": "Intel(R) Xeon(R) CPU E5-2673 v4 @ 2.30GHz", "speed1": 2294, "user1": 11289320.0, "sys1": 11838060.0, "idle1": 597919930.0, "os": "4.4.0-128-generic", "uptime": 680576, "time": 1574439648111, "load1": 0.41, "load5": 0.33, "load15": 0.26}
+

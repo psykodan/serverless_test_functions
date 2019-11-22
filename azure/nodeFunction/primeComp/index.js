@@ -43,6 +43,6 @@ let responseBody = {id: id,
 					};
 
 
-		context.res.json(responseBody);
+		context.res.send(JSON.stringify(responseBody));
 
 };
