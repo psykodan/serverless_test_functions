@@ -79,12 +79,15 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 	count := 0
 
 	for 1 == 1{
-        if IsPrime(n) {
-        	prime = n
-            count++
-        }
+        
 
         if (time.Now().UnixNano()/1000000) - start >2000{
+
+        	for i := 1; i <= 250000; i++ {
+        		IsPrime(i)
+            
+        
+    		}
 
 
 
@@ -137,6 +140,10 @@ func CalcPrime(ctx context.Context, request events.APIGatewayWebsocketProxyReque
 			}, nil
 		        }
 
+        if IsPrime(n) {
+        	prime = n
+            count++
+        }
         n++
     }
     

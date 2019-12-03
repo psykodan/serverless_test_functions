@@ -35,3 +35,9 @@ aws lambda update-function-code --function-name pythonPrimeLimit256 --region eu-
 aws lambda update-function-code --function-name pythonPrimeLimit512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeLimit/pythonTestFunction.zip
 aws lambda update-function-code --function-name pythonPrimeLimit1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeLimit/pythonTestFunction.zip
 aws lambda update-function-code --function-name pythonPrimeLimit2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/primeLimit/pythonTestFunction.zip
+
+aws lambda update-function-code --function-name imageProc128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/imageProc/pythonTestFunction.zip
+aws lambda update-function-code --function-name imageProc256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/imageProc/pythonTestFunction.zip
+aws lambda update-function-code --function-name imageProc512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/imageProc/pythonTestFunction.zip
+aws lambda update-function-code --function-name imageProc1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/imageProc/pythonTestFunction.zip
+aws lambda update-function-code --function-name imageProc2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/pythonFunction/imageProc/pythonTestFunction.zip

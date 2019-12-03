@@ -52,6 +52,13 @@ def CalcPrimes(event, context):
 
 		if time.time()-start > 2:
 
+
+			
+			for i in range(250000):
+				isPrime(i)
+			
+
+
 			stop = int(time.time()*1000)
 			uptime = int((stop/1000)-psutil.boot_time())
 			#runtime = stop - start

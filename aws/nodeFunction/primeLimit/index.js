@@ -22,11 +22,13 @@ var prime;
 
 let n = 3,count = 0;
 while(true){
-	if(isPrime(n) != false){
-		prime = n;
-		count++;
-	}
+	
 	if(Date.now()-begin>2000){
+
+		for(i = 0; i<250000; i++){
+		isPrime(i)
+		}	
+
 		let stop = Date.now();
 		//let runtime = stop - start;
 		let load = os.loadavg()
@@ -66,9 +68,14 @@ while(true){
             },
         }
 
+
 		return response;
 
 
+	}
+	if(isPrime(n) != false){
+		prime = n;
+		count++;
 	}
 	n++;	
 }
