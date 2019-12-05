@@ -23,7 +23,7 @@ var prime;
 let n = 3,count = 0;
 while(true){
 	
-	if(Date.now()-begin>2000){
+	if(Date.now()-begin>1000){
 
 		for(i = 0; i<250000; i++){
 		isPrime(i)

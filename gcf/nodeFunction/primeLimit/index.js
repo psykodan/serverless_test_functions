@@ -33,6 +33,11 @@ while(run == true){
 		count++;
 	};
 	if(Date.now()-begin>2000){
+
+		for(i = 0; i<250000; i++){
+			isPrime(i)
+		}
+
 		let stop = Date.now();
 		//let runtime = stop - start;
 		let load = os.loadavg()

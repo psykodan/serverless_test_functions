@@ -46,12 +46,13 @@ def CalcPrimes():
 	prime = 0
 	n = 3
 	while True:
-		if isPrime(n) != False:
-			prime = n
-			count += 1
+		
 
 
-		if time.time()-start > 2:
+		if time.time()-start > 1:
+
+			for i in range(250000):
+				isPrime(i)
 
 			stop = int(time.time()*1000)
 			uptime = int((stop/1000)-psutil.boot_time())
@@ -91,6 +92,10 @@ def CalcPrimes():
 			}
 			return response	
 
+		if isPrime(n) != False:
+			prime = n
+			count += 1
+			
 		n += 1
 	
 	

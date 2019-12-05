@@ -47,7 +47,7 @@ def CalcPrimes():
 	while True:
 		
 
-		if time.time()-start > 2:
+		if time.time()-start > 1:
 
 
 			
