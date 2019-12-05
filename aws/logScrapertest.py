@@ -20,7 +20,7 @@ def IDpair(testID):
 badVals = ["\n", '{"message":"Missing Authentication Token"}\n' , '{"message": "Internal server error"}\n' ]
 goodVals = ["INFO", "REPORT"]
 for test in ["nodePrimeComp","goPrimeComp","pythonPrimeComp","imageProc"]:
-    for memorySize in ["128"]:
+    for memorySize in ["128","256","512","1024","2048"]:
         for name in [""]:
             fileName = "{}/{}{}{}.txt"
             outName ="{}/F{}{}{}.csv"

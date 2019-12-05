@@ -1,2 +1,2 @@
 Error ResourceNotFoundException: The specified log group does not exist.
-	status code: 400, request id: fb749597-efe4-49d3-856a-f1bbec89054b
+	status code: 400, request id: d60caa15-334d-466d-935a-b1c1a4b431bc

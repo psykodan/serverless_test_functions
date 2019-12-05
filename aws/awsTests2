@@ -5,6 +5,14 @@
 
 #128MB
 seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>nodePrimeComp/nodePrimeComp128.txt
+#256MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>nodePrimeComp/nodePrimeComp256.txt
+#512MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>nodePrimeComp/nodePrimeComp512.txt
+#1024MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>nodePrimeComp/nodePrimeComp1024.txt
+#2048MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>nodePrimeComp/nodePrimeComp2048.txt
 
 
 #go
@@ -13,6 +21,14 @@ seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execut
 
 #128MB
 seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>goPrimeComp/goPrimeComp128.txt
+#256MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>goPrimeComp/goPrimeComp256.txt
+#512MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>goPrimeComp/goPrimeComp512.txt
+#1024MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>goPrimeComp/goPrimeComp1024.txt
+#2048MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>goPrimeComp/goPrimeComp2048.txt
 
 
 
@@ -22,9 +38,25 @@ seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execut
 
 #128MB
 seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>pythonPrimeComp/pythonPrimeComp128.txt
+#256MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>pythonPrimeComp/pythonPrimeComp256.txt
+#512MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>pythonPrimeComp/pythonPrimeComp512.txt
+#1024MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>pythonPrimeComp/pythonPrimeComp1024.txt
+#2048MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>pythonPrimeComp/pythonPrimeComp2048.txt
 
 #ImageProc image operations / Memory load test
 
 #128MB
 seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/imageproc128">>imageProc/imageProc128.txt
+#256MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>imageProc/imageProc256.txt
+#512MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>imageProc/imageProc512.txt
+#1024MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>imageProc/imageProc1024.txt
+#2048MB
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>imageProc/imageProc2048.txt
 
