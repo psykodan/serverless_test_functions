@@ -4,35 +4,27 @@
 #PrimeComp number calculation / Runtime test
 
 #128MB
-seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>nodePrimeComp/nodePrimeComp128.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>nodePrimeComp/nodePrimeComp128.txt
 
-
-#PrimeLimit number calculation / CPU test
-
-#128MB
-seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://h9ztxi81hj.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>nodePrimeLimit/nodePrimeLimit128.txt
 
 #go
 
 #PrimeComp number calculation / Runtime test
 
 #128MB
-seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>goPrimeComp/goPrimeComp128.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>goPrimeComp/goPrimeComp128.txt
 
 
-#PrimeLimit number calculation / CPU test
-
-#128MB
-seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://bp6wrh8xz1.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>goPrimeLimit/goPrimeLimit128.txt
 
 #python
 
 #PrimeComp number calculation / Runtime test
 
 #128MB
-seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>pythonPrimeComp/pythonPrimeComp128.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primecomp128">>pythonPrimeComp/pythonPrimeComp128.txt
 
-#PrimeLimit number calculation / CPU test
+#ImageProc image operations / Memory load test
 
 #128MB
-seq 1 1 | xargs -n1 -P1  curl -s -w "\n" -X GET "https://76mrve5dv3.execute-api.eu-west-1.amazonaws.com/test/primelimit128">>pythonPrimeLimit/pythonPrimeLimit128.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/imageproc128">>imageProc/imageProc128.txt
+
