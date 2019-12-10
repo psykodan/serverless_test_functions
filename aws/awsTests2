@@ -52,11 +52,11 @@ seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://76mrve5dv3.execut
 #128MB
 seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/imageproc128">>imageProc/imageProc128.txt
 #256MB
-seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/primecomp256">>imageProc/imageProc256.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/imageproc256">>imageProc/imageProc256.txt
 #512MB
-seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/primecomp512">>imageProc/imageProc512.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/imageproc512">>imageProc/imageProc512.txt
 #1024MB
-seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/primecomp1024">>imageProc/imageProc1024.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/imageproc1024">>imageProc/imageProc1024.txt
 #2048MB
-seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/primecomp2048">>imageProc/imageProc2048.txt
+seq 1 1000 | xargs -n1 -P1000  curl -s -w "\n" -X GET "https://ekfd7ck7d6.execute-api.eu-west-1.amazonaws.com/test/imageproc2048">>imageProc/imageProc2048.txt
 
