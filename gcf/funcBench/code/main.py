@@ -124,11 +124,11 @@ def setUID():
 	#Create some randome ID unique to the function and also write it to a file
 	head=""
 	temp=""
-	for i in range(7):
+	for i in range(8):
 		temp = str(hex(math.floor(random.random() *255 )))
 		head += (temp.split("x"))[1]
 		
-	UID = head + str(int(start)) 
+	UID = head 
 
 	f = open("/tmp/UID.txt", "a")
 	f.write(UID)
