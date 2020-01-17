@@ -8,7 +8,7 @@ import random
 from flask import jsonify
 
 
-start = int(time.time())
+
 
 def iotest(size, cnt):
 	
@@ -150,7 +150,7 @@ def UIDcheck():
 
 
 def main(request):
-
+	start = int(time.time())
 	vmID = getvmID()
 	UIDs = UIDcheck()
 	UID = setUID()
