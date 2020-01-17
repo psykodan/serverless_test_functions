@@ -6,107 +6,107 @@ import math
 import random
 
 
-start = time.time()
+
 
 def iotest(size, cnt):
 	
 	#IO throughput/latency test using dd command
 
-    proc = subprocess.Popen(["dd",
-                             "if=/dev/urandom",
-                             "of=/tmp/ioload.log",
-                             "bs=%s" % size,
-                             "count=%s" % cnt,
-                             "conv=fdatasync",
-                             "oflag=dsync"],
-                            stderr=subprocess.PIPE)
-    err, out = proc.communicate()
-    data = str(out)
-    data = data.split(",")
-    res = data[2]
-    res = res.replace(" ","").replace("\\n'", "")
+	proc = subprocess.Popen(["dd",
+							 "if=/dev/urandom",
+							 "of=/tmp/ioload.log",
+							 "bs=%s" % size,
+							 "count=%s" % cnt,
+							 "conv=fdatasync",
+							 "oflag=dsync"],
+							stderr=subprocess.PIPE)
+	err, out = proc.communicate()
+	data = str(out)
+	data = data.split(",")
+	res = data[2]
+	res = res.replace(" ","").replace("\\n'", "")
 
-    return res
-    
-    
+	return res
+	
+	
 
 def getcpuinfo():
 
 	#Aquiring the CPU model info via /proc/cpuinfo
 
-    cpuinfo = []
-    info = ["processor", "model", "model name", "cpu MHz", "cache size"]
-    
-    proc = os.popen("cat /proc/cpuinfo")
+	cpuinfo = []
+	info = ["processor", "model", "model name", "cpu MHz", "cache size"]
+	
+	proc = os.popen("cat /proc/cpuinfo")
 
-    for line in proc:
-        if any(val in line for val in info):
-            data = line.replace(" ", "").replace("\t", "").replace("\n", "").split(":")
-            cpuinfo.append(data[1])
-    
+	for line in proc:
+		if any(val in line for val in info):
+			data = line.replace(" ", "").replace("\t", "").replace("\n", "").split(":")
+			cpuinfo.append(data[1])
+	
   
-    return cpuinfo
+	return cpuinfo
 
 
 def getmeminfo():
 
 	#Aquiring the memory info via /proc/meminfo
 
-    meminfo = 0
-    info = ["MemTotal"]
-    
-    proc = os.popen("cat /proc/meminfo")
+	meminfo = 0
+	info = ["MemTotal"]
+	
+	proc = os.popen("cat /proc/meminfo")
 
-    for line in proc:
-        if any(val in line for val in info):
-            data = line.replace(" ", "").replace("\t", "").replace("\n", "").split(":")
-            meminfo = data[1]
-    
+	for line in proc:
+		if any(val in line for val in info):
+			data = line.replace(" ", "").replace("\t", "").replace("\n", "").split(":")
+			meminfo = data[1]
+	
   
-    return meminfo
+	return meminfo
 
 def getcputimes():
 
 	#Aquiring the CPU times info via /proc/stat
 
-    cputimes = []
-    info = ["cpu", "btime"]
-    
-    proc = os.popen("cat /proc/stat")
-    #print(proc.read())
-    for line in proc:
-        if info[0] in line:
-            raw = line.replace("\t", "").replace("\n", "").split(" ")
-            data = ' '.join(raw).split()
-            cputimes.append(data[0])
-            cputimes.append(data[1])
-            cputimes.append(data[3])
-            cputimes.append(data[4])
-        elif info[1] in line:
-            data = line.replace("\t", "").replace("\n", "").split(" ")
-            cputimes.append(data[1])
-    
+	cputimes = []
+	info = ["cpu", "btime"]
+	
+	proc = os.popen("cat /proc/stat")
+	#print(proc.read())
+	for line in proc:
+		if info[0] in line:
+			raw = line.replace("\t", "").replace("\n", "").split(" ")
+			data = ' '.join(raw).split()
+			cputimes.append(data[0])
+			cputimes.append(data[1])
+			cputimes.append(data[3])
+			cputimes.append(data[4])
+		elif info[1] in line:
+			data = line.replace("\t", "").replace("\n", "").split(" ")
+			cputimes.append(data[1])
+	
   
-    return cputimes
+	return cputimes
 
 
 def getvmID():
 	#Aquiring the VM ID via /proc/self/cgroup
 
-    vmID = ""
-    info = ["sandbox-root"]
-    
-    proc = os.popen("cat /proc/self/cgroup")
-    
-    for line in proc:
-        if info[0] in line:
-            data = line.replace(" ", "").replace("\t", "").replace("\n", "").split(":")
-            vmID = data[2]
-            
+	vmID = ""
+	info = ["sandbox-root"]
+	
+	proc = os.popen("cat /proc/self/cgroup")
+	
+	for line in proc:
+		if info[0] in line:
+			data = line.replace(" ", "").replace("\t", "").replace("\n", "").split(":")
+			vmID = data[2]
+			
 
-    
+	
   
-    return vmID
+	return vmID
 
 
 def setUID():
@@ -127,19 +127,19 @@ def setUID():
 	return UID
 
 def UIDcheck():
-    UIDs = []
-    path = "/tmp/UID.txt"
-    if os.path.exists(path):
-        f = open(path)
-        res = f.read()
-        f.close()
-        UIDs = res.split("\n")
-    
-    return UIDs
+	UIDs = []
+	path = "/tmp/UID.txt"
+	if os.path.exists(path):
+		f = open(path)
+		res = f.read()
+		f.close()
+		UIDs = res.split("\n")
+	
+	return UIDs
 
 
 def lambda_handler(event, context):
-
+	start = int(time.time()*1000)
 	vmID = getvmID()
 	UIDs = UIDcheck()
 	UID = setUID()
@@ -147,20 +147,25 @@ def lambda_handler(event, context):
 	cpuinfo = getcpuinfo()
 	meminfo = getmeminfo()
 	diskIO = iotest(512, 1000)
-	
+	end = int(time.time()*1000)
+	functime = end - start
+	uptime = cputimes[-1]
+
 	response = {
-        "vmID" : vmID,
-        "UID" : UID,
-        "UIDs" : UIDs,
-        "cputimes" : cputimes,
-        "cpuinfo" : cpuinfo,
-        "meminfo" : meminfo,
-        "diskIO" : diskIO,
-        "start" : start,
-        "end" : time.time()
-	    
+		"vmID" : vmID,
+		"UID" : UID,
+		"UIDs" : UIDs,
+		"cputimes" : cputimes,
+		"cpuinfo" : cpuinfo,
+		"meminfo" : meminfo,
+		"diskIO" : diskIO,
+		"start" : start,
+		"end" : end,
+		"funcTime" : functime,
+		"uptime" : uptime
+		
 	}
 	return {
-        'statusCode': 200,
-        'body': json.dumps(response)
-    }
+		'statusCode': 200,
+		'body': json.dumps(response)
+	}

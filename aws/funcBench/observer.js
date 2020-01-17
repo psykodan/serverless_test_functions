@@ -4,11 +4,11 @@ var url = 'mongodb://mongodb5446kd:na3zez@danu7.it.nuigalway.ie:8717/mongodb5446
 
 
 //128MB
-var start = Date.now();
+let start = Date.now();
 request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench128', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
@@ -28,11 +28,11 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench1
 
 
 //256MB
-var start = Date.now();
+let start = Date.now();
 request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench256', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
@@ -51,11 +51,11 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench2
 });
 
 //512MB
-var start = Date.now();
+let start = Date.now();
 request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench512', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
@@ -74,11 +74,11 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench5
 });
 
 //1024MB
-var start = Date.now();
+let start = Date.now();
 request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench1024', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
@@ -97,11 +97,11 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench1
 });
 
 //2048MB
-var start = Date.now();
+let start = Date.now();
 request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench2048', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
