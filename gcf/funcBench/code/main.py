@@ -150,7 +150,7 @@ def UIDcheck():
 
 
 def main(request):
-	start = int(time.time())
+	start = int(time.time()*1000)
 	vmID = getvmID()
 	UIDs = UIDcheck()
 	UID = setUID()
@@ -158,7 +158,7 @@ def main(request):
 	cpuinfo = getcpuinfo()
 	meminfo = getmeminfo()
 	diskIO = iotest(512, 1000)
-	end = int(time.time())
+	end = int(time.time()*1000)
 	functime = end - start
 	uptime = cputimes[-1]
 	

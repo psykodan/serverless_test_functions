@@ -3,12 +3,14 @@ const request = require('request');
 var url = 'mongodb://mongodb5446kd:na3zez@danu7.it.nuigalway.ie:8717/mongodb5446';
 
 
+
 //128MB
-var start = Date.now();
+function f128(){
+let start = Date.now();
 request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench128', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
@@ -24,15 +26,16 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   });
 }); 
 
-});
+})};
 
 
 //256MB
-var start = Date.now();
+function f256{
+let start = Date.now();
 request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench256', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
@@ -48,14 +51,15 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   });
 }); 
 
-});
+})};
 
 //512MB
-var start = Date.now();
+function f512{
+let start = Date.now();
 request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench512', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
@@ -71,14 +75,15 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   });
 }); 
 
-});
+})};
 
 //1024MB
-var start = Date.now();
+function f1024{
+let start = Date.now();
 request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench1024', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
@@ -94,14 +99,15 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   });
 }); 
 
-});
+})};
 
 //2048MB
-var start = Date.now();
+function f2048{
+let start = Date.now();
 request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench2048', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
-  var stop = Date.now();
-  var runtime = stop - start
+  let stop = Date.now();
+  let runtime = stop - start
   MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mongodb5446");
@@ -117,4 +123,12 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   });
 }); 
 
-});
+})};
+
+
+
+f128();
+f256();
+f512();
+f1024();
+f2048();
