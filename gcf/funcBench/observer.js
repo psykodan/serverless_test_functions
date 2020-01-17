@@ -30,7 +30,7 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
 
 
 //256MB
-function f256{
+function f256(){
 let start = Date.now();
 request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench256', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
@@ -54,7 +54,7 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
 })};
 
 //512MB
-function f512{
+function f512(){
 let start = Date.now();
 request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench512', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
@@ -78,7 +78,7 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
 })};
 
 //1024MB
-function f1024{
+function f1024(){
 let start = Date.now();
 request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench1024', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
@@ -102,7 +102,7 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
 })};
 
 //2048MB
-function f2048{
+function f2048(){
 let start = Date.now();
 request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench2048', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }

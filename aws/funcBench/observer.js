@@ -29,7 +29,7 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench1
 
 
 //256MB
-function f256{
+function f256(){
 let start = Date.now();
 request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench256', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
@@ -53,7 +53,7 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench2
 })};
 
 //512MB
-function f512{
+function f512(){
 let start = Date.now();
 request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench512', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
@@ -77,7 +77,7 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench5
 })};
 
 //1024MB
-function f1024{
+function f1024(){
 let start = Date.now();
 request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench1024', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
@@ -101,7 +101,7 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench1
 })};
 
 //2048MB
-function f2048{
+function f2048(){
 let start = Date.now();
 request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench2048', { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
