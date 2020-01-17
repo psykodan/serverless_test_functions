@@ -1,0 +1,7 @@
+#!/bin/bash
+cd code
+gcloud functions deploy funcBench128 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 128MB
+gcloud functions deploy funcBench256 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 256MB
+gcloud functions deploy funcBench512 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 512MB
+gcloud functions deploy funcBench1024 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 1024MB
+gcloud functions deploy funcBench2048 --entry-point main --runtime python37 --trigger-http --allow-unauthenticated --memory 2048MB
