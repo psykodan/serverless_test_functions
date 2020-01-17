@@ -58,6 +58,7 @@ def main():
 	
 	readTime=time.time()-start
 	fileSize = ops.path.getsize('img.png')
+	print(fileSize)
 	readSpeed=(1/readTime)*((numFiles*fileSize)/1000000)
 
 
@@ -90,6 +91,7 @@ def main():
 
 	writeTime=time.time()-start
 	fileSize = ops.path.getsize('/tmp/img1.png')
+	print(fileSize)
 	writeSpeed=(1/writeTime)*((numFiles*fileSize)/1000000)
 
 
