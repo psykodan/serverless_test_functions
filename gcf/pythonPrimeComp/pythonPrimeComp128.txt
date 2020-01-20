@@ -1,6 +1,0 @@
-{"count":22045,"id":"1b328b6bcc9ced1573735840567","idle1":0.0,"idle2":0.0,"load1":0.0,"load15":0.0,"load5":0.0,"model1":"unknown","model2":"unknown","os":"4.4.0","speed1":2000,"speed2":2000,"sys1":0.0,"sys2":0.0,"time":1573735840567,"uptime":2610,"user1":0.0,"user2":0.0}
-
-
-{"count":22045,"id":"838eddbcc119681573743846518","idle1":0.0,"idle2":0.0,"load1":0.0,"load15":0.0,"load5":0.0,"model1":"unknown","model2":"unknown","os":"4.4.0","speed1":2599,"speed2":2599,"sys1":0.0,"sys2":0.0,"time":1573743846518,"uptime":6863,"user1":0.0,"user2":0.0}
-
-

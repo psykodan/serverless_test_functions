@@ -1,4 +1,0 @@
-{"id":"e5e2d26fe8f6481573735823783","count":32951,"prime":388567,"model1":"unknown","speed1":2500,"user1":0,"sys1":0,"idle1":0,"model2":"unknown","speed2":2500,"user2":0,"sys2":0,"idle2":0,"os":"4.4.0","uptime":3037,"time":1573735823783,"load1":0,"load5":0,"load15":0}
-
-{"id":"b9f42d5bb9a9a1573743831066","count":29012,"prime":337697,"model1":"unknown","speed1":2000,"user1":0,"sys1":0,"idle1":0,"model2":"unknown","speed2":2000,"user2":0,"sys2":0,"idle2":0,"os":"4.4.0","uptime":7460,"time":1573743831066,"load1":0,"load5":0,"load15":0}
-
