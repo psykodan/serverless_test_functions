@@ -17,6 +17,7 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench1
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 128;
   dbo.collection("AWS").insertOne(data, function(err, res) {
     if (err) throw err;
@@ -42,6 +43,7 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench2
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 256;
   dbo.collection("AWS").insertOne(data, function(err, res) {
     if (err) throw err;
@@ -66,6 +68,7 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench5
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 512;
   dbo.collection("AWS").insertOne(data, function(err, res) {
     if (err) throw err;
@@ -90,6 +93,7 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench1
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 1024;
   dbo.collection("AWS").insertOne(data, function(err, res) {
     if (err) throw err;
@@ -114,6 +118,7 @@ request('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench2
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 2048;
   dbo.collection("AWS").insertOne(data, function(err, res) {
     if (err) throw err;

@@ -148,6 +148,25 @@ def UIDcheck():
 	
 	return UIDs
 
+def isPrime(number):
+    start = 2;
+    limit = math.sqrt(number);
+    while start <= limit:
+        if (number % start < 1):
+        	return False
+        start += 1
+    return number
+
+def CPUutil():
+	timeStart = int(time.time()*1000)
+	n = 1
+	res = 0
+	while(int(time.time()*1000)-timeStart <= 1000):
+		if(isPrime(n)!=False):
+			res += 1
+		n += 1
+
+	return res
 
 def main(request):
 	start = int(time.time()*1000)
@@ -161,7 +180,8 @@ def main(request):
 	end = int(time.time()*1000)
 	functime = end - start
 	uptime = cputimes[-1]
-	
+	cpuUtil = CPUutil()
+
 	response = {
 		"vmID" : vmID,
 		"UID" : UID,
@@ -173,7 +193,8 @@ def main(request):
 		"start" : start,
 		"end" : end,
 		"funcTime" : functime,
-		"uptime" : uptime
+		"uptime" : uptime,
+		"CPUutil" : cpuUtil
 		
 	}
 	return jsonify(response)

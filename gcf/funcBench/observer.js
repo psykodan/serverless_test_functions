@@ -18,6 +18,7 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 128;
   dbo.collection("GCF").insertOne(data, function(err, res) {
     if (err) throw err;
@@ -43,6 +44,7 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 256;
   dbo.collection("GCF").insertOne(data, function(err, res) {
     if (err) throw err;
@@ -67,6 +69,7 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 512;
   dbo.collection("GCF").insertOne(data, function(err, res) {
     if (err) throw err;
@@ -91,6 +94,7 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 1024;
   dbo.collection("GCF").insertOne(data, function(err, res) {
     if (err) throw err;
@@ -115,6 +119,7 @@ request('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench
   data.request = start;
   data.response = stop;
   data.runtime = runtime;
+  data.startLag = body.start - start;
   data.memory = 2048;
   dbo.collection("GCF").insertOne(data, function(err, res) {
     if (err) throw err;
