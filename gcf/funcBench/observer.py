@@ -12,7 +12,7 @@ def f128(users):
 	db = client['mongodb5446']
 	collection = db['GCF']
 	start = (int)(time.time() *1000)
-	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcbench128')
+	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench128')
 	stop = (int)(time.time() *1000) 
 	runtime = stop - start
 	data = r.json()
@@ -29,7 +29,7 @@ def f256(users):
 	db = client['mongodb5446']
 	collection = db['GCF']
 	start = (int)(time.time() *1000)
-	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcbench256')
+	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench256')
 	stop = (int)(time.time() *1000) 
 	runtime = stop - start
 	data = r.json()
@@ -46,7 +46,7 @@ def f512(users):
 	db = client['mongodb5446']
 	collection = db['GCF']
 	start = (int)(time.time() *1000)
-	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcbench512')
+	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench512')
 	stop = (int)(time.time() *1000) 
 	runtime = stop - start
 	data = r.json()
@@ -63,7 +63,7 @@ def f1024(users):
 	db = client['mongodb5446']
 	collection = db['GCF']
 	start = (int)(time.time() *1000)
-	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcbench1024')
+	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench1024')
 	stop = (int)(time.time() *1000) 
 	runtime = stop - start
 	data = r.json()
@@ -80,7 +80,7 @@ def f2048(users):
 	db = client['mongodb5446']
 	collection = db['GCF']
 	start = (int)(time.time() *1000)
-	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcbench2048')
+	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench2048')
 	stop = (int)(time.time() *1000) 
 	runtime = stop - start
 	data = r.json()
