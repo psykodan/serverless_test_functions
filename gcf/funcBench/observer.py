@@ -108,7 +108,7 @@ f256(1)
 f512(1)
 f1024(1)
 f2048(1)
-
+"""
 #warm start
 f128(1)
 f256(1)
@@ -126,6 +126,6 @@ time.sleep(50)
 runInParallel(f1024, 50)
 time.sleep(50)
 runInParallel(f2048, 50)
-
+"""
 
 
