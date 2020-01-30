@@ -16,7 +16,7 @@ def f128(users):
 	stop = (int)(time.time() *1000) 
 	
 	data = r.json()
-	runtime = data['stop'] - start
+	runtime = data['end'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
@@ -34,7 +34,7 @@ def f256(users):
 	stop = (int)(time.time() *1000) 
 	
 	data = r.json()
-	runtime = data['stop'] - start
+	runtime = data['end'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
@@ -52,7 +52,7 @@ def f512(users):
 	stop = (int)(time.time() *1000) 
 	
 	data = r.json()
-	runtime = data['stop'] - start
+	runtime = data['end'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
@@ -70,7 +70,7 @@ def f1024(users):
 	stop = (int)(time.time() *1000) 
 	
 	data = r.json()
-	runtime = data['stop'] - start
+	runtime = data['end'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
@@ -88,7 +88,7 @@ def f2048(users):
 	stop = (int)(time.time() *1000) 
 	
 	data = r.json()
-	runtime = data['stop'] - start
+	runtime = data['end'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
