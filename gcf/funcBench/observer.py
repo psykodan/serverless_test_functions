@@ -11,9 +11,9 @@ def f128(users):
 	client = MongoClient(url)
 	db = client['mongodb5446']
 	collection = db['GCF']
-	start = (int)(time.time() *1000)
+	start = int(time.time() *1000)
 	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench128')
-	stop = (int)(time.time() *1000) 
+	stop = int(time.time() *1000) 
 	
 	data = r.json()
 	runtime = data['end'] - start
@@ -29,9 +29,9 @@ def f256(users):
 	client = MongoClient(url)
 	db = client['mongodb5446']
 	collection = db['GCF']
-	start = (int)(time.time() *1000)
+	start = int(time.time() *1000)
 	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench256')
-	stop = (int)(time.time() *1000) 
+	stop = int(time.time() *1000) 
 	
 	data = r.json()
 	runtime = data['end'] - start
@@ -47,9 +47,9 @@ def f512(users):
 	client = MongoClient(url)
 	db = client['mongodb5446']
 	collection = db['GCF']
-	start = (int)(time.time() *1000)
+	start = int(time.time() *1000)
 	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench512')
-	stop = (int)(time.time() *1000) 
+	stop = int(time.time() *1000) 
 	
 	data = r.json()
 	runtime = data['end'] - start
@@ -65,9 +65,9 @@ def f1024(users):
 	client = MongoClient(url)
 	db = client['mongodb5446']
 	collection = db['GCF']
-	start = (int)(time.time() *1000)
+	start = int(time.time() *1000)
 	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench1024')
-	stop = (int)(time.time() *1000) 
+	stop = int(time.time() *1000) 
 	
 	data = r.json()
 	runtime = data['end'] - start
@@ -83,9 +83,9 @@ def f2048(users):
 	client = MongoClient(url)
 	db = client['mongodb5446']
 	collection = db['GCF']
-	start = (int)(time.time() *1000)
+	start = int(time.time() *1000)
 	r = requests.get('https://us-central1-spherical-plane-258017.cloudfunctions.net/funcBench2048')
-	stop = (int)(time.time() *1000) 
+	stop = int(time.time() *1000) 
 	
 	data = r.json()
 	runtime = data['end'] - start

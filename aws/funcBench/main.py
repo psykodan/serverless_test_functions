@@ -167,10 +167,11 @@ def lambda_handler(event, context):
 	cpuinfo = getcpuinfo()
 	meminfo = getmeminfo()
 	diskIO = iotest(512, 1000)
-	end = int(time.time()*1000)
-	functime = end - start
 	uptime = cputimes[-1]
 	cpuUtil = CPUutil()
+	end = int(time.time()*1000)
+	functime = end - start
+	
 
 	response = {
 		"vmID" : vmID,
