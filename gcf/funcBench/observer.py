@@ -113,9 +113,13 @@ f2048(1)
 
 #concurrent requests
 runInParallel(f128, 50)
+time.sleep(50)
 runInParallel(f256, 50)
+time.sleep(50)
 runInParallel(f512, 50)
+time.sleep(50)
 runInParallel(f1024, 50)
+time.sleep(50)
 runInParallel(f2048, 50)
 
 
