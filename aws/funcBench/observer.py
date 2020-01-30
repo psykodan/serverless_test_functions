@@ -14,8 +14,9 @@ def f128(users):
 	start = (int)(time.time() *1000)
 	r = requests.get('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench128')
 	stop = (int)(time.time() *1000) 
-	runtime = stop - start
+	
 	data = r.json()
+	runtime = data['stop'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
@@ -31,8 +32,9 @@ def f256(users):
 	start = (int)(time.time() *1000)
 	r = requests.get('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench256')
 	stop = (int)(time.time() *1000) 
-	runtime = stop - start
+	
 	data = r.json()
+	runtime = data['stop'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
@@ -48,8 +50,9 @@ def f512(users):
 	start = (int)(time.time() *1000)
 	r = requests.get('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench512')
 	stop = (int)(time.time() *1000) 
-	runtime = stop - start
+	
 	data = r.json()
+	runtime = data['stop'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
@@ -65,8 +68,9 @@ def f1024(users):
 	start = (int)(time.time() *1000)
 	r = requests.get('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench1024')
 	stop = (int)(time.time() *1000) 
-	runtime = stop - start
+	
 	data = r.json()
+	runtime = data['stop'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
@@ -82,8 +86,9 @@ def f2048(users):
 	start = (int)(time.time() *1000)
 	r = requests.get('https://45vbcux00g.execute-api.eu-west-1.amazonaws.com/bench/funcbench2048')
 	stop = (int)(time.time() *1000) 
-	runtime = stop - start
+	
 	data = r.json()
+	runtime = data['stop'] - start
 	data['request'] = start;
 	data['response'] = stop;
 	data['runtime'] = runtime;
