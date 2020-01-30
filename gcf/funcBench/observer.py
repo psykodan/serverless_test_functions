@@ -21,7 +21,7 @@ def f128(users):
 	data['response'] = stop;
 	data['runtime'] = runtime;
 	data['startLag'] = data['start'] - start;
-	data['users'] = users
+	
 	data['memory'] = 128;
 	collection.insert_one(data)
 
@@ -39,7 +39,7 @@ def f256(users):
 	data['response'] = stop;
 	data['runtime'] = runtime;
 	data['startLag'] = data['start'] - start;
-	data['users'] = users
+	
 	data['memory'] = 256;
 	collection.insert_one(data)
 
@@ -57,7 +57,7 @@ def f512(users):
 	data['response'] = stop;
 	data['runtime'] = runtime;
 	data['startLag'] = data['start'] - start;
-	data['users'] = users
+	
 	data['memory'] = 512;
 	collection.insert_one(data)
 
@@ -75,7 +75,7 @@ def f1024(users):
 	data['response'] = stop;
 	data['runtime'] = runtime;
 	data['startLag'] = data['start'] - start;
-	data['users'] = users
+	
 	data['memory'] = 1024;
 	collection.insert_one(data)
 
@@ -93,7 +93,7 @@ def f2048(users):
 	data['response'] = stop;
 	data['runtime'] = runtime;
 	data['startLag'] = data['start'] - start;
-	data['users'] = users
+	
 	data['memory'] = 2048;
 	collection.insert_one(data)
 
