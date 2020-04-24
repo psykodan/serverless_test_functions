@@ -12,7 +12,7 @@ def f(users):
 	db = client['mongodb5446']
 	collection = db['Azure']
 	start = int(time.time() *1000)
-	r = requests.get('https://funcbench2.azurewebsites.net/api/funcBench')
+	r = requests.get('https://funcBenchv2.azurewebsites.net/api/funcBench')
 	stop = int(time.time() *1000) 
 	
 	data = r.json()

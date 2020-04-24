@@ -98,26 +98,41 @@ def getcputimes():
   
 	return cputimes
 
+def getconID():
+	#Aquiring the container ID via a temporary file
 
+	conID = ""
+	
+	
+	path = "/tmp/conID.txt"
+	if os.path.exists(path):
+		f = open(path)
+		res = f.read()
+		f.close()
+		conID = res
+	else:
+		head=""
+		temp=""
+		for i in range(8):
+			temp = str(hex(math.floor(random.random() *255 )))
+			head += (temp.split("x"))[1]
+			
+		conID = head 
+
+		f = open(path, "a")
+		f.write(conID)
+		f.close()
+	
+	return conID
+	
 def getvmID():
-	#Aquiring the VM ID via /proc/self/cgroup
+	#Aquiring the VM ID via /proc/sys/kernel/random/boot_id
 	vmID = ""
-	machinid = os.popen("cat /etc/machine-id")
-	for line in machinid:
+	
+	bootid = os.popen("cat /proc/sys/kernel/random/boot_id")
+	for line in bootid:
 	    vmID = line.replace("\n","")
 	
-	#info = ["sandbox-root"]
-	
-	#proc = os.popen("cat /proc/self/cgroup")
-	
-	#for line in proc:
-		#if info[0] in line:
-			#data = line.replace(" ", "").replace("\t", "").replace("\n", "").split(":")
-			#vmID = data[2]
-			
-
-	
-  
 	return vmID
 
 
@@ -173,6 +188,7 @@ def CPUutil():
 def main(dict):
 	start = int(time.time()*1000)
 	vmID = getvmID()
+	conID = getconID()
 	UIDs = UIDcheck()
 	UID = setUID()
 	cputimes = getcputimes()
@@ -187,6 +203,7 @@ def main(dict):
 
 	response = {
 		"vmID" : vmID,
+		"conID" : conID,
 		"UID" : UID,
 		"UIDs" : UIDs,
 		"cputimes" : cputimes,
