@@ -1,0 +1,5 @@
+aws lambda update-function-code --function-name funcBench128 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/funcBench/funcBench.zip
+aws lambda update-function-code --function-name funcBench256 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/funcBench/funcBench.zip
+aws lambda update-function-code --function-name funcBench512 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/funcBench/funcBench.zip
+aws lambda update-function-code --function-name funcBench1024 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/funcBench/funcBench.zip
+aws lambda update-function-code --function-name funcBench2048 --region eu-west-1 --zip-file fileb://~/PhD/serverless_test_functions/aws/funcBench/funcBench.zip
